@@ -1,5 +1,6 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
   NavLink,
@@ -48,6 +49,7 @@ export default function App() {
       <NavLink to="/about" style={({ isActive, isPending, isTransitioning }) => ({ color: isActive ? "red" : "blue" })}>About</NavLink>
       <span> </span>
       <NavLink to="/d/finances" style={({ isActive, isPending, isTransitioning }) => ({ color: isActive ? "red" : "blue" })}>finances</NavLink>
+      <Link to='/d/personal-info'>personal-info</Link>
       <Outlet />
     </div>
   )

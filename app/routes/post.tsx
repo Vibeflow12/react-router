@@ -1,4 +1,4 @@
-import { Form, Link, NavLink, redirect, useFetcher } from "react-router";
+import { Form, Link, NavLink, redirect, useFetcher, useNavigation } from "react-router";
 import type { Route } from "./+types/post";
 import about from "./about";
 
@@ -22,6 +22,10 @@ export default function Post({ loaderData }: Route.ComponentProps) {
 
     const Fetcher = useFetcher();
     const isDeleted = Fetcher.data?.isDeleted
+
+    const navigation = useNavigation();
+    const isNavigating = Boolean(navigation.location)
+
 
     return (
         <div>
