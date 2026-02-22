@@ -1,5 +1,6 @@
-import { Form, redirect, useFetcher } from "react-router";
+import { Form, Link, redirect, useFetcher } from "react-router";
 import type { Route } from "./+types/post";
+import about from "./about";
 
 export async function clientLoader({ params }: Route.LoaderArgs) {
     const postId = params.postId;
@@ -34,8 +35,9 @@ export default function Post({ loaderData }: Route.ComponentProps) {
 
             <Fetcher.Form method="delete">
                 <button type="submit">Delete</button>
-
             </Fetcher.Form>
+
+            <Link to="/about">About</Link>
         </div >
     )
 }
