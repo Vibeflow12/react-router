@@ -1,4 +1,4 @@
-import { Form, Link, redirect, useFetcher } from "react-router";
+import { Form, Link, NavLink, redirect, useFetcher } from "react-router";
 import type { Route } from "./+types/post";
 import about from "./about";
 
